@@ -1,0 +1,98 @@
+<body class="shadow-lg rounded-4" *ngIf="buttonPress === false">
+  <div class="w-100  progress-bar-position ">
+    <div class="progress rounded border">
+      <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+  </div>
+  <div class="fs-4 fst-italic fw-bold text-center ready">Tudo pronto, clique no botão abaixo para calcular seus macros
+    nutrientes</div>
+  <button class="btn btn-primary mt-5 m-4" (click)="calc()">Calcular</button>
+</body>
+<div *ngIf="buttonPress === true" class="shadow-lg rounded-4 border stats-body">
+  <div class="fs-4 fst-italic fw-bold title pt-3">Suas estatisticas:</div>
+  <div class="fs-4 fst-italic fw-bold metabolicBasal pt-3">Calorias gastas:</div>
+  <div class=" text-userInfo">Ola {{user.nome}}, voce tem {{user.idade}} anos, do sexo {{user.sexo}} que tem
+    {{user.altura}} m de altura & pesa {{user.peso}} Kg</div>
+  <div class="fs-4 fst-italic fw-bold peso-ideial">
+   Seu IMC: {{user.imc}}
+    <div class="fs-6 peso-ideial-text">
+      Seu IMC ideal é estimado entre 18,5 e 24,9
+      Estas fórmulas são baseadas na sua altura e representam médias, por isso não as leve muito a sério
+    </div>
+  </div>
+  <div class="container text">
+    Com base em suas estatísticas, a melhor estimativa para suas calorias de manutenção é de
+   {{user.caloriasTotal}} calorias por dia, com base na fórmula Mifflin-St Jeor, que é amplamente conhecida por ser a mais precisa.
+  </div>
+  <div class="calories-div rounded-5 border shadow-lg">
+    <div class="calories-day border-bottom">{{user.caloriasTotal}}
+      <div class="fs-6 fst-italic">calorias por dia</div>
+    </div>
+      <div class="calories-week border-top"> {{user.caloriasTotal * 7}}
+      <div class="fs-6 fst-italic">calorias por semana</div>
+    </div>
+  </div>
+  <div class="fs-5 fst-italic fw-bold tabela-title">A tabela abaixo mostra quantas calorias a mais seriam gastas se você tivesse selecionado um nível de atividade diferente</div>
+  <table class="table table-dark table-hover tabela-body">
+    <thead>
+
+</thead>
+<tbody>
+  <tr>
+    <th scope="row">Nivel de atividade</th>
+    
+    <td>Total</td>
+  </tr>
+  <tr>
+    <th scope="row">Taxa metabolica Basal</th>
+    <td>{{user.caloriasBasal}}</td>
+  </tr>
+  <tr>
+    <th scope="row">Não muito ativo</th>
+    
+    <td>{{user.caloriasNaoAtivo}}</td>
+ 
+  </tr>
+  <tr>
+    <th scope="row">Levemente ativo</th>
+  
+    <td>{{user.caloriasLementeAtivo}}</td>
+   
+  </tr>
+  <tr>
+    <th scope="row">Ativo</th>
+
+    <td>{{user.caloriasAtivo}}</td>
+
+  </tr>
+  <tr>
+    <th scope="row">Bastante ativo</th>
+
+    <td>{{user.caloriasBastanteAtivo}}</td>
+  </tr>
+</tbody>
+</table>
+<div class="fs-6 fst-italic fw-bold macronutrientes-title">
+  Como seu gasto calorico é {{user.caloriasTotal}}, a distribuição dos macros será da seguinte forma:
+  33% de carboidratos, 33% de proteinas e 33% de gorduras. Com um total de {{user.caloriasParaObjetivo}} calorias para te ajudar a {{(user.objetivo).toLowerCase()}}
+</div>
+
+  <table class="table macronutrientes-body  table-dark text-light bg-dark rounded-4">
+    <thead>
+      <tr>
+        <th scope="col"></th>
+        <th scope="col">Carboidrato</th>
+        <th scope="col">Proteina</th>
+        <th scope="col">Gordura</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row"></th>
+        <td class="fs-4 fw-bold fst-italic">{{user.carboidratos}}</td>
+        <td class="fs-4 fw-bold fst-italic">{{user.proteinas}}</td>
+        <td class="fs-4 fw-bold fst-italic">{{user.gorduras}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

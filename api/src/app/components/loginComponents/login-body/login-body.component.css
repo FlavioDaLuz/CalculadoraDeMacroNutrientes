@@ -1,0 +1,10 @@
+form{
+    width: 500px ;
+    position: relative;
+    left: 30%;
+}
+button{
+    width: 60%;
+    position: relative;
+    left: 20%;
+}

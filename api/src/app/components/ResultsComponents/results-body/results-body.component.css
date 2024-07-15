@@ -1,0 +1,196 @@
+
+    
+
+.progress-bar-position{
+    position: relative;
+    top: -1.2%;
+    z-index: 0;
+}
+body{
+    background-color: rgb(255, 255, 255);
+    width: 33%;
+    height: 400px;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow:auto;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.ready{
+    position: relative;
+    top: 25%;
+}
+.progress{
+    width:100%;
+    height: 15px;
+    position: relative;
+}
+
+
+
+button{
+    width:30%;
+    height: 10%;
+}
+
+
+.select{
+    width: 300px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.select:hover{
+    border: solid 2px rgb(21, 0, 251);
+    cursor: pointer;
+}
+.date{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    height: 40px;
+    border: 1px solid #a8a8a8;
+    width: 140px;
+}
+
+.date:hover{
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+@keyframes animation {
+    from{
+        width: 80%;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+.progress-bar{
+    animation-name: animation;
+    animation-duration: 2s;
+    width: 100%;
+
+}
+
+button{
+    position: relative;
+    top: 25%;
+}
+.stats-body{
+    background-color: rgb(255, 255, 255);
+    width: 70%;
+    height: 600px;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* overflow:auto; */
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.title{
+  position: absolute;
+    align-self: start;
+    padding-left: 10px;
+}
+.text{
+    padding-left: 10px;
+    position: absolute;
+    align-self: start;
+    width: 40%;
+    top: 20%;
+    text-align: left;
+}
+
+.text-userInfo{
+    position: absolute;
+    align-self: start;
+    font-size: 15px;
+    padding-left: 10px;
+    top: 10%;
+
+    width: 60%;
+    height: 8%;
+}
+.calories-div{
+    display: flex;
+    position: absolute;
+    align-self:  flex-end;
+    width: 35%;
+    right: 1%;
+    height: 80%;
+   overflow: hidden;
+    flex-direction: column;
+    top: 14%;
+}
+.metabolicBasal{
+    position: relative;
+    align-self: flex-end;
+    /* bottom: 10%; */
+    right: 5%;
+}
+.calories-day{
+    background-color: rgb(216, 216, 216);
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    flex-direction: column;
+
+}
+.calories-week{
+    background-color: rgb(216, 216, 216);
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    flex-direction: column;
+}
+.peso-ideial{
+    position: absolute;
+    align-self: start;
+    top: 55%;
+    padding-left: 10px;
+    /* background-color: red;s */
+    width: 40%;
+    text-align: left;
+}
+.peso-ideial-text{
+    font-weight: normal;
+}
+
+.tabela-title{
+    /* background-color: red; */
+    position: absolute;
+    top: 100%;
+    align-self: start;
+    padding-left: 10px;
+}
+.tabela-body{
+    position: absolute;
+    top: 110%;
+}
+
+.macronutrientes-title{
+    position: absolute;
+    top: 160%;
+}
+.macronutrientes-body{
+    position:absolute;
+    top: 170%;
+    width: 95%;
+    height: 20%;
+}

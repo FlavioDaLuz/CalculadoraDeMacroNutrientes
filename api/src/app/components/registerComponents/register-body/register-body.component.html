@@ -1,0 +1,61 @@
+<!-- <form [formGroup]="newRegister"> -->
+    <form (ngSubmit)="onSubmit()" class=" g-3 needs-validation">
+    <div class="shadow m-3 rounded p-3 max-size">
+        <div class="form-row row">
+            <div class="form-group col-md-6">
+                <label for="inputEmail">Email</label>
+                <input type="email" name="email" class="form-control" id="inputEmail" placeholder="Email" [(ngModel)]="usuario.email" required>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputPassword">Senha</label>
+                <input name="senha" type="password" class="form-control" id="inputPassword" placeholder="Senha" [(ngModel)]="usuario.senha" >
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputAddress">Endereço</label>
+            <input name="endereco" type="text" class="form-control" id="inputAddress" [(ngModel)]="usuario.endereco">
+        </div>
+
+        <div class="form-row row">
+            <div class="form-group col-md-4">
+                <label for="inputState">Estado</label>
+                <select id="inputState" class="form-control" name="estado" [(ngModel)]="usuario.estado">
+                    <option selected>Selecione</option>
+                    <option value="Acre"> Acre </option>
+                    <option value="Alagoas"> Alagoas </option>
+                    <option value="Amapá"> Amapá </option>
+                    <option value="Amazonas"> Amazonas </option>
+                    <option value="Bahia"> Bahia </option>
+                    <option value="Ceará"> Ceará </option>
+                    <option value="Espírito Santo"> Espírito Santo </option>
+                </select>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputCity">Cidade</label>
+                <input name="cidade" type="text" class="form-control" id="inputCity" [(ngModel)]="usuario.cidade">
+            </div>
+        </div>
+        <div class="form-group">
+
+        </div>
+        <br>
+        <div class="row">
+     <button  (click)="postRegister(usuario)" type="submit" id="button" class="btn btn-primary"> Registrar
+    </button> 
+    
+     
+     <div class="alert alert-danger" role="alert" *ngIf="boolean"> 
+        Preencha todos os campos
+    </div>
+     <div class="alert alert-danger" role="alert" *ngIf="existEmail"> 
+        Email ja registrado
+    </div>
+</div>
+    </div>
+    
+   
+</form>
+
+
+
+

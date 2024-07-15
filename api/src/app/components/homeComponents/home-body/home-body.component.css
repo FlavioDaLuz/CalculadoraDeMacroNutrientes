@@ -1,0 +1,36 @@
+.img{
+    height: 350px;
+    width: 500px;
+    position: relative;
+    float: right;
+}
+
+.text-container{
+    width:600px;
+    height: 500px;
+    position: relative;
+    float: left;
+}
+
+.bottom-container{
+    position: absolute;
+    top: 750px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 950px;
+    height: 450px;
+   
+}
+
+.container-small{
+    /* background-color: red; */
+    width: 500px;
+}
+
+.img-size{
+    height: 250px;
+    width: 109%;
+    box-sizing: border-box;
+    position: relative;
+    right: 11px;
+}

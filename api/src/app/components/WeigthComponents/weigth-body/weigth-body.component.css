@@ -1,0 +1,76 @@
+
+    
+
+.progress-bar-position{
+    position: relative;
+    top: -1.2%;
+    z-index: 0;
+}
+body{
+    background-color: rgb(255, 255, 255);
+    width: 33%;
+    height: 500px;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow:auto;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.progress{
+    width:100%;
+    height: 15px;
+    position: relative;
+}
+
+
+
+button{
+    width:30%;
+    height: 10%;
+}
+
+
+.select{
+    width: 300px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.select:hover{
+    border: solid 2px rgb(21, 0, 251);
+    cursor: pointer;
+}
+.date{
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    height: 40px;
+    border: 1px solid #a8a8a8;
+    width: 140px;
+}
+
+.date:hover{
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+@keyframes animation {
+    from{
+        width: 60%;
+    }
+    to {
+        width: 80%;
+    }
+}
+
+.progress-bar{
+    animation-name: animation;
+    animation-duration: 2s;
+    width: 80%;
+
+}

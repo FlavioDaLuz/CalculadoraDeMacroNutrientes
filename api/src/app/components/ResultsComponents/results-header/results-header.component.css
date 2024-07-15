@@ -1,0 +1,10 @@
+p{
+    color: blue;
+}
+.header{
+    display: flex;
+    position: absolute;
+    width: 100%;
+    align-items: center;
+    justify-content:  center;
+}
