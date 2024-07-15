@@ -13,7 +13,8 @@ import { ResultsComponent } from './pages/results/results.component';
 
 
 const routes: Routes = [
-  {path:'',component:HomeComponent},
+  // {path:'',component:HomeComponent},
+  {path:'',component:WellcomeComponent},
   {path:'register',component:RegisterComponent},
   {path:'login',component:LoginComponent},
   {path:'wellcome',component:WellcomeComponent},
